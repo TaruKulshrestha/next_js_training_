@@ -1,0 +1,18 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Snippet {
+  id    Int    @id @default(autoincrement()) // Unique ID for each snippet
+  title String // Title of the snippet
+  code  String // The actual code of the snippet
+}
