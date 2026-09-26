@@ -1,0 +1,4 @@
+/* Lesson 55 — Tailwind Setup: these three lines load Tailwind's styles. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
